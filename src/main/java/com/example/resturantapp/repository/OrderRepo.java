@@ -19,5 +19,7 @@ public interface OrderRepo extends JpaRepository<Order, Long> {
     @Query("SELECT o FROM Order o ORDER BY o.createdAt DESC")
     List<Order> findAllOrderByCreatedAtDesc();
 
+    List<Order> findByPhonenumberOrderByCreatedAtDesc(String phonenumber);
+
     long countByStatus(OrderStatus status);
 }

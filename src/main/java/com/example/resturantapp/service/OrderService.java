@@ -205,4 +205,8 @@ public class OrderService {
         orderRepository.delete(order);
     }
 
+    public List<Order> getOrdersByPhone(String phone) {
+        return orderRepository.findByPhonenumberOrderByCreatedAtDesc(phone);
+    }
+
 }
