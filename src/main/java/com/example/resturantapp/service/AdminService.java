@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 public class AdminService {
     private final AdminRepo adminRepository;
 
-    private final String UPLOAD_DIR = "uploads/logo/";
+    private final String UPLOAD_DIR = "src/main/resources/static/uploads/logo/";
 
     public Admin getProfile() {
         String email = SecurityContextHolder.getContext().getAuthentication().getName();
