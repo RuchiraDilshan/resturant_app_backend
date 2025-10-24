@@ -31,6 +31,7 @@ public class PublicController {
     public ResponseEntity<ApiResponseDTO<Map<String, String>>> getContact() {
         Admin admin = adminService.getPublicContact();
         Map<String, String> contact = new HashMap<>();
+        contact.put("restaurantname", admin.getRestaurantname() != null ? admin.getRestaurantname() : "");
         contact.put("address", admin.getAddress() != null ? admin.getAddress() : "");
         contact.put("workinghours", admin.getWorkinghours() != null ? admin.getWorkinghours() : "");
         contact.put("phone", admin.getAdminphonenumber() != null ? admin.getAdminphonenumber() : "");
